@@ -57,6 +57,11 @@ A: Let: m = number of nodes before the cycle starts and c = length of the cycle 
 """
 
 def detectLoop_Floyd(head):
+    """
+    Docstring for detectLoop_Floyd
+    T.C: O(n)
+    S.C: O(1)
+    """
     # fast and slow pointer initially points to the same head
     slow = head
     fast = head
