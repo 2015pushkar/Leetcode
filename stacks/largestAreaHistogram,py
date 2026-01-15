@@ -1,0 +1,18 @@
+"""
+hts = [2, 1, 5, 6, 2, 3]
+pse = [-1,-1, 1, 2, 1, 4]
+nse = [1, 6, 4, 4, 6, 6]
+maxSpan = (nse[i] - pse[i] - 1) * heights[i]
+area = [2, 6, 10, 6, 8, 3]
+
+- PSE and NSE are blockers, not included in the rectangle. The rectangle spans only the indices strictly between them.
+- Therefore the usable range is
+    leftmost = PSE[i] + 1
+    rightmost = NSE[i] - 1
+    width = rightmost - leftmost + 1
+    width = (NSE[i] - 1) - (PSE[i] + 1) + 1 => NSE[i] - PSE[i] - 1
+
+    Ex: leftmost=2, rightmost=2, bars included: 2
+    Correct width: 1
+
+"""
