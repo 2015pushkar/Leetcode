@@ -25,3 +25,14 @@ graph = [
 ]
 
 print(bfs_cycle_detection(graph, 0))  # Output: True
+
+"""
+        2
+        │
+        │
+0 ───── 1 ───── 3 ───── 4
+│              ╱        │
+│            ╱          │
+└────────── 4 ──────────┘
+
+"""
