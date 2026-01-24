@@ -85,6 +85,12 @@ def has_path_dfs(graph, start, end) -> bool:
 
     return dfs(start)
 
+"""
+Trade-offs between BFS and DFS: 
+- DFS is simpler to implement, but may traverse one adjacent node very deeply before ever going onto the immediate neighbors.
+- BFS is useful for finding the shortest path
+"""
+
 
 
 
