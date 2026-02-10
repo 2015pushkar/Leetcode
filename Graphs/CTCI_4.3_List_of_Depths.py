@@ -9,6 +9,19 @@ Implementation:
         - depth 1: nodes one edge away
         - depth 2: nodes two edges away
 and so on.
+
+- DFS solution:
+    - T.C: O(N)
+    - S.C: O(logN) recursive calls - each adds a new level to the stack; For a skewed tree worst case O(N)
+- BFS solution:
+    - T.C: O(N)
+    - S.C: O(W), where W is the maximum width of the tree, for a balanced tree W = N/2, so worst case O(N)
+
+- Neither is always better,
+    - Balanced tree, DFS recursion tends to use less auxiliary memory O(logN) than BFS
+    - Skewed tree, BFS tends to use less auxiliary memory than DFS recursion
+
+- One practical detail, Deep recursion can crash due to recursion limit, even if the big O looks fine. Iterative BFS avoids that issue.
 """
 
 from collections import deque
