@@ -1,6 +1,10 @@
 from collections import defaultdict
 from typing import List
 
+"""
+Arrays, Hashtable
+"""
+
 def twoSum(nums: List[int], target: int) -> List[int]:
     hashmap = defaultdict(int)
 #    Store the val (diff) along with its indices for the number from which we take the difference
